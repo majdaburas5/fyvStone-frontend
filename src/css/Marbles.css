@@ -1,0 +1,122 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  grid-gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  max-width: 345px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "media"
+    "content";
+}
+
+.card-media {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 220px;
+  transition: transform 0.7s ease-out;
+}
+
+.card-media:hover {
+  transform: scale(1.9);
+}
+
+.card-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card-content {
+  grid-area: content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.card-price {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-style {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-type {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-content input[type="number"] {
+  margin-left: 110px;
+  width: 100px;
+  height: 34px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #333;
+}
+
+.card-content input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  color: #000;
+}
+
+label {
+  margin-top: 7px;
+  font-weight: bold;
+}
+.filter-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 20px;
+}

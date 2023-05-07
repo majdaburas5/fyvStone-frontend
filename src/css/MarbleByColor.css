@@ -1,0 +1,76 @@
+.card-byColor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.card-byColor {
+  max-width: 345px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "media"
+    "content";
+}
+
+.card-byColor-media {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 220px;
+  transition: transform 0.7s ease-out;
+}
+
+.card-byColor-media:hover {
+  transform: scale(1.9);
+}
+
+.card-byColor-title {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card-byColor-content {
+  grid-area: content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-byColor-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.card-byColor-price {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-byColor-style {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-byColor-type {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
